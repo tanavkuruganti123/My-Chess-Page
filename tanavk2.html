@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="tanavk.css">
+    </head>
+    <body>
+        <h1> 
+            Search Rules
+        </h1>
+        <br>
+        <br>
+         <div class="container">
+        <input type="text" name="search" placeholder="search chess rules" onkeyup="searchanimal()" id="searchbar">
+        <ul id="list">
+            <li class="ChessR">Checkmate is when you win or lose</li>
+             <li class="ChessR">The pawn can promote to another piece</li>
+              <li class="ChessR">En passant is where your pawn can take a pawn diaggonally when it isnt there currently</li>
+               <li class="ChessR">you have to take another pawn diagonally one square</li>
+                <li class="ChessR">you place peices with strong peices in the back and pawns in the front</li>
+        </ul>
+        </div>
+        <script>
+            function searchanimal(){
+                let input = 
+                document.getElementById("searchbar").value;
+                input = input.toLowerCase();
+                let x = document.getElementsByClassName("ChessR");
+                for(i = 0;i < x.length;i++){
+                    if(!x[i].innerHTML.toLowerCase().includes(input)){
+                        x[i].style.display = "none";
+                        
+                    }
+                     else{
+                        x[i].style.display = "list-item";
+                     }
+                }
+            }
+            </script>
+            <br>
+            <br>
+            <br>
+            <br>
+              <a href="tanavk.html"><button>< Previous page</button></a>
+        <a href="tanavk3.html"><button>Next Page ></button></a>
+    </body>
+</html>
